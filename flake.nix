@@ -19,7 +19,11 @@
             };
           in
             pkgs.mkShellNoCC {
-              nativeBuildInputs  = with pkgs; [ ];
+              nativeBuildInputs  = with pkgs; [
+                dotty # scala3
+                sbt
+                coursier
+              ];
             }
         );
     };
